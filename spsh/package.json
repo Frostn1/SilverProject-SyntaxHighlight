@@ -1,0 +1,25 @@
+{
+    "name": "spsh",
+    "displayName": "Silver-Syntax-Highlight",
+    "description": "A syntax highlight for the silver project, which gives a syntax highlight for .si files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "silver",
+            "aliases": ["Silver", "silver"],
+            "extensions": [".si"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "silver",
+            "scopeName": "source.si",
+            "path": "./syntaxes/silver.tmLanguage.json"
+        }]
+    }
+}

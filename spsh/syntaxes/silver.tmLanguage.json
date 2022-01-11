@@ -1,0 +1,78 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Silver",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#strings1"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#structs"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.silver",
+					"match": "\\b(link|export)\\b"
+				},
+				{
+					"name": "keyword",
+					"match": "\\b(ano)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.silver",
+					"match": "\\\\."
+				}
+			]
+		},
+		"strings1": {
+			"name": "string",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.silver",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b[0-9]+\\b"
+				}
+			]
+		},
+		"structs": {
+			"patterns": [
+				{
+					"name": "support.function",
+					"match": "\\b(json|raw|yaml)\\b"
+				},
+				{
+					"name": "entity.name.class",
+					"match": "\\b([A-Z0-9])\\w+(?=:)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.si"
+}
