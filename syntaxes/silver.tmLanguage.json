@@ -16,6 +16,9 @@
 		},
 		{
 			"include": "#structs"
+		},
+		{
+			"include": "#base"
 		}
 	],
 	"repository": {
@@ -70,6 +73,19 @@
 				{
 					"name": "entity.name.class",
 					"match": "\\b([A-Z0-9])\\w+(?=:)\\b"
+				}
+				
+			]
+		},
+		"base": {
+			"patterns": [
+				{
+					"name": "entity.name.class",
+					"match": "\\b(Text|Number|Bool|List|Struct)\\b"
+				},
+				{
+					"name" : "keyword",
+					"match": "\\b(Any)\\b"
 				}
 			]
 		}
