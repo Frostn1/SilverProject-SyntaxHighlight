@@ -68,7 +68,7 @@
 			"patterns": [
 				{
 					"name": "support.function",
-					"match": "\\b(json|raw|yaml)\\b"
+					"match": "\\b(json|raw|yaml|base)\\b"
 				},
 				{
 					"name": "entity.name.class",
